@@ -5,7 +5,7 @@ const Topic = () => {
     const data = useLoaderData().data
     return (
         <div>
-            Topic: 
+            {data.map(t=> <div>Topic Name:<h1>{data.name}</h1><p>Total Questions:{data.total}</p></div>)}
         </div>
     );
 };
