@@ -19,7 +19,7 @@ const Blog = () => {
         so on. Context is also touted as an easier, lighter approach to state
         management using Redux.
       </p>
-      <h1>3. useRef Hook.</h1>
+      <h1>3. Describe useRef Hook</h1>
       <p>
         In a React component, useState and useReducer can cause your component
         to re-render each time there is a call to the update functions. In this
