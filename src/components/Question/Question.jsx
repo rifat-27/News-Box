@@ -10,13 +10,16 @@ const Question = (ques) => {
   const handleClick = (op) => {
     op === correctAnswer ? toast('Right Answer!') : toast('Wrong Answer!')
   }
+  const handleEyeClick = () => {
+    toast(correctAnswer)
+  }
   return (
     <div className='quiz-question-container'>
-    <ToastContainer/>
+      <ToastContainer />
       <div className='quiz-question'>
         <h4>
           {question}
-          <span className='eye-icon'>
+          <span className='eye-icon' onClick={() => handleEyeClick()}>
             <FontAwesomeIcon icon={faEye} />
           </span>
         </h4>

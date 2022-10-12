@@ -1,13 +1,18 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React from 'react'
+import { useLoaderData } from 'react-router-dom'
 
 const Topic = () => {
-    const data = useLoaderData().data
-    return (
+  const data = useLoaderData().data
+  return (
+    <div>
+      {data.map((t) => (
         <div>
-            {data.map(t=> <div>Topic Name:<h1>{data.name}</h1><p>Total Questions:{data.total}</p></div>)}
+          <h1>{t.name}</h1>
+          <p>Total Questions:{t.total}</p>
         </div>
-    );
-};
+      ))}
+    </div>
+  )
+}
 
-export default Topic;
+export default Topic
