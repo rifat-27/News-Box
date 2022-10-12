@@ -8,7 +8,7 @@ const Topic = () => {
       {data.map((t) => (
         <div>
           <h1>{t.name}</h1>
-          <p>Total Questions:{t.total}</p>
+          <p>Total:{t.total} questions</p>
         </div>
       ))}
     </div>
