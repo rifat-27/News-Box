@@ -1,15 +1,25 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import './Question.css'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import { faEye } from '@fortawesome/free-solid-svg-icons'
 
 const Question = (ques) => {
   const { id, question, options, correctAnswer } = ques.ques
   const handleClick = (op) => {
-    console.log(op, correctAnswer)
+    op === correctAnswer ? toast('Right Answer!') : toast('Wrong Answer!')
   }
   return (
     <div className='quiz-question-container'>
+    <ToastContainer/>
       <div className='quiz-question'>
-        <h4>{question}</h4>
+        <h4>
+          {question}
+          <span className='eye-icon'>
+            <FontAwesomeIcon icon={faEye} />
+          </span>
+        </h4>
       </div>
       <div className='option-container'>
         {options.map((op) => (
