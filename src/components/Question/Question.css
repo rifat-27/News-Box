@@ -1,0 +1,21 @@
+.quiz-question-container {
+    color: rgb(0, 0, 0);
+  margin: 50px;
+}
+
+.option-container {
+    margin: 0 300px;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.option {
+  width: 70%;
+  background-color: rgba(18, 16, 25, 0.566);
+  color: white;
+  padding: 3px;
+  margin: 2px;
+  display: flex;
+  cursor: pointer;
+}
