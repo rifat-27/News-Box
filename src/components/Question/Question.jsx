@@ -8,7 +8,7 @@ import { faEye } from '@fortawesome/free-solid-svg-icons'
 const Question = (ques) => {
   const { id, question, options, correctAnswer } = ques.ques
   const handleClick = (op) => {
-    op === correctAnswer ? toast('Right Answer!') : toast('Wrong Answer!')
+    op === correctAnswer ? toast('Correct Answer!') : toast('Wrong Answer!')
   }
   const handleEyeClick = () => {
     toast(correctAnswer)
